@@ -1,0 +1,259 @@
+/* soft resest do css*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ffffff;
+  background-size: 225vh;
+  height: 110vh;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-size: 14px;
+}
+
+
+/* breakpoint*/
+/* se a tela tiver pelo menos 400px vai carregar estes estilos*/
+@media (min-width: 600px) {
+  body {
+    font-size: 18px;
+  }
+
+}
+
+header {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* ---------------------------------------------- .botao */
+
+
+.circles-wrapper {
+  width: 97%;
+  justify-content: flex-end;
+  display: flex;
+}
+
+  .circles-wrapper a{
+      text-decoration: none;
+      color: #06283D;
+      font-size: .9em;
+  }
+
+  .circle {
+    height: 60px;
+    width: 60px;
+    border-radius: 58% 43% 33% 64% / 50% 38% 53% 50%;
+    background: transparent;
+    box-shadow: inset 6px 33px 20px 0 #c9c9c9, inset 20px 80px 15px 0 #e0e0e0, 10px 20px 20px 0px #c9c9c9;
+   }
+    
+   .circle::before {
+    content: '';
+    position: absolute;
+    border-radius: 37% 54% 46% 46%;
+    background: white;
+    width: 25px;
+    transform: rotate(-30deg);
+    height: 7px;
+    top: 10px;
+    left: 10px;
+   }
+    
+   .circle::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    background: white;
+    width: 5px;
+    height: 5px;
+    top: 30px;
+    left: 10px;
+   }
+   
+
+.circle:hover {
+  background: #4d4d4d;
+  cursor: pointer;
+  transition: .5s;
+}
+
+.circle-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.circle-content {
+  font-size: 20px;
+  color: rgb(255, 255, 255);
+}
+
+.main-circle {
+  position: fixed;
+  top: 85%;
+  z-index: 1;
+}
+
+.main-circle .circle {
+  animation: pulse 2s;
+  animation-iteration-count: 5;
+}
+
+/* ---------------------------------------------- .menu */
+
+.menu {
+  background-color: #06283D;
+  position: fixed;
+  width: 100vw;
+  top: 0;
+}
+
+
+.menu a {
+  color: #ffffff;
+  display: block;
+  background: #06283D;
+  padding: 10px 20px;
+  transition: background-color 1s, color 1s;
+  z-index: 1;
+}
+
+/* ---------------------------------------------- .fundo do menu */
+.menu a:hover {
+  background-color: #ffffff;
+  color: #06283D;
+}
+
+.menu li {
+  list-style: none;
+}
+
+.menu ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ---------------------------------------------- .animacao do titulo */
+
+@keyframes animacaoTitulo {
+  100% {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+
+}
+
+/* ---------------------------------------------- .titulo */
+.site-title {
+  color: #06283D;
+  text-align: center;
+}
+
+.site-title {
+  font-size: 5em;
+  font-family: 'Cinzel Decorative', cursive;
+  text-align: center;
+}
+
+.site-subtitle {
+  color: #06283D;
+  text-align: center;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-size: 1.4em;
+  line-height: 2.6em;
+}
+
+/* ---------------------------------------------- . sobre */
+.text {
+  color: #DFF6FF;
+}
+
+.sobre {
+  background-color: #06283d;
+  padding: 2.5em;
+  min-height: 100vh;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.contato {
+  background-color: #06283d;
+  padding: 2em;
+  min-height: 38vh;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
+.sobre h2 {
+  color: #ffffff;
+  font-size: 3em;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  margin-bottom: 1.5em;
+  line-height: 2.8em;
+  text-align: center;
+}
+
+/* ---------------------------------------------- .contato */
+.contato h2 {
+  color: #ffffff;
+  font-size: 3em;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  margin-bottom: 1.5em;
+  text-align: center;
+}
+
+.sobre p {
+  color: #ffffff;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  text-indent: 2em;
+  margin-bottom: 2em;
+  text-align: justify;
+}
+
+.contato .icons {
+  text-align: center;
+}
+
+.contato a {
+  color: #ffffff;
+  font-size: 3em;
+  transition: text-shadow 1s;
+}
+
+.contato a:active,
+.contato a:hover {
+  text-decoration: none;
+  text-shadow: 0px 8px 8px #256D85;
+}
+
+/* ---------------------------------------------- .extra */
+
+.extra {
+  background-color: #06283d;
+  padding: 0.5em;
+  min-height: 1vh;
+  margin-left: auto;
+  margin-right: auto;
+  color:rgb(255, 255, 255);
+  text-align: center;
+}

@@ -1,2 +1,2 @@
-# Site Pessoal
-Site pessoal, hospedado no Departamento de Informática da Universidade Federal do Paraná.
+# Personal website
+Personal website, hosted on the Department of Informatics at the Federal University of Paraná.
